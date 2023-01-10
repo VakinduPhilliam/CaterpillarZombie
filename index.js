@@ -29,6 +29,14 @@ app.get('/', async (req, res) => {
         }
     });
 
+    //let issuesResponse = await fetch('https://api.bitbucket.org/2.0/repositories/vakindu/caterpillarzombie/issues', { // Fetch bitbucket project repository issues
+    //    method: 'GET',
+    //    headers: {
+    //        'Authorization': 'Bearer BetHAqSUH7xvvYGropBq',
+    //        'Accept': 'application/json'
+    //    }
+    //});
+
     let jsonBody = await response.text(); // fetched data in raw form
 
     let objectBody = JSON.parse(jsonBody); // fetched data in object form

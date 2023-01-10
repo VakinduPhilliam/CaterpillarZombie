@@ -21,6 +21,20 @@ _Caterpillar Zombie Interface:_
 
 ![Caterpillar Zombie Interface](/docs/ui3.png)
 
+</br>
+
+![Caterpillar Zombie Interface](/docs/ui6.png)
+
+</br>
+
+## Caterpillars:
+
+- Black caterpillar - Represents number of pull requests in Bitbucket project repository.
+
+- Green Caterpillar - Represents number of issues in Bitbucket project repository.
+
+- Red Caterpillar - Represents number of alerts in Bitbucket project repository.
+
 <br/>
 
 ## Installation:

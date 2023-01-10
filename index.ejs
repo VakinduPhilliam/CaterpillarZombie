@@ -476,14 +476,18 @@ var GamePoints = function() {
       ship: { sx: 0, sy: 0, w: 37, h: 42, frames: 1 },
       missile: { sx: 0, sy: 30, w: 2, h: 10, frames: 1 },
       enemy_purple: { sx: 37, sy: 0, w: 42, h: 43, frames: 1 },
+      enemy_bee: { sx: 79, sy: 0, w: 37, h: 43, frames: 1 },
+      enemy_ship: { sx: 116, sy: 0, w: 42, h: 43, frames: 1 },
       explosion: { sx: 0, sy: 64, w: 64, h: 64, frames: 12 }
      };
      
      var enemies = {
        ltr:      { x: 0,   y: -100, sprite: 'enemy_purple', health: 10, 
                    B: 75, C: 1, E: 100, missiles: 2  },
-       step:     { x: 0,   y: -50, sprite: 'enemy_purple', health: 10,
-                   B: 150, C: 1.2, E: 75 }
+       step:     { x: 0,   y: -100, sprite: 'enemy_bee', health: 10, 
+                   B: 75, C: 1, E: 100, missiles: 2  },
+       circle:   { x: 0,   y: -100, sprite: 'enemy_ship', health: 10, 
+                   B: 75, C: 1, E: 100, missiles: 2  }
      };
      
      var OBJECT_PLAYER = 1,
@@ -515,11 +519,11 @@ var GamePoints = function() {
       // Start,   End, Gap,  Type,   Override
        [ 0,      5000*caterpillar_length,  60, 'ltr' ],
        [ 6000*caterpillar_length,   8800*caterpillar_length, 60, 'ltr', { x: 100 } ],
-       [ 9000*caterpillar_length,   13000*caterpillar_length, 60, 'ltr', { x: 40 } ],
-       [ 14800*caterpillar_length,  18000*caterpillar_length, 60, 'ltr', { x: 80 } ],
+       [ 9000*caterpillar_length,   13000*caterpillar_length, 60, 'circle', { x: 40 } ],
+       [ 14800*caterpillar_length,  18000*caterpillar_length, 60, 'step', { x: 80 } ],
        [ 19000*caterpillar_length,  24000*caterpillar_length, 60, 'ltr', { x: 120 } ],
-       [ 26100*caterpillar_length,  30000*caterpillar_length, 60, 'ltr', { x: 10 } ],
-       [ 33000*caterpillar_length,  35800*caterpillar_length, 60, 'ltr', { x: 150 }],
+       [ 26100*caterpillar_length,  30000*caterpillar_length, 60, 'circle', { x: 10 } ],
+       [ 33000*caterpillar_length,  35800*caterpillar_length, 60, 'step', { x: 150 }],
        [ 37000*caterpillar_length,  44000*caterpillar_length, 60, 'ltr', { x: 100 }],
        // [ 45000,  48000, 60, 'step', { x: 150 }],
        // [ 45000,  48000, 60, 'ltr', { x: 100 }]
